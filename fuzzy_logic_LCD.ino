@@ -17,30 +17,6 @@ LiquidCrystal lcd(12, 10, 11, 5, 4, 3, 2);
 
 //-------------------------**       STRUCTURES
 
-void setup()
-{
-  // set up the LCD's number of rows and columns: 
-  lcd.begin(16, 2);
-  // Print a message to the LCD.
-  lcd.print("Привет, мир!");
-  lcd.scrollDisplayRight(); 
-      // wait a bit:
-  delay(500);
-  lcd.scrollDisplayLeft(); 
-  delay(500);
-  
-}
-
-void loop() 
-{
- //FUZZY_SYSTEM();
-  lcd.scrollDisplayRight(); 
-      // wait a bit:
-  delay(500);
-  lcd.scrollDisplayLeft(); 
-  delay(500);
-}
-
 struct SETS
 {
     float x0,x1,x2,x3;
@@ -409,5 +385,26 @@ float SUM(float x,float y)//Algebraic/Probalistic Sum..OR
     else if(y==-1) return x;
     else return ((x+y)-(x*y));
 }
+
+
+void setup()
+{
+  // set up the LCD's number of rows and columns: 
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print("Привет, мир!");
+  lcd.scrollDisplayRight(); 
+      // wait a bit:
+  delay(500);
+  lcd.scrollDisplayLeft(); 
+  delay(500);
+  
+}
+
+void loop() 
+{
+ FUZZY_SYSTEM();
+}
+
 
 
